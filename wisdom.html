@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STEM '25</title>
+  <style>
+    body {
+      background-image: url('Wisd.jpeg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: rgb(255, 142, 142);
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .paragraph {
+      margin: 200px auto 20px auto;
+      max-width: 200px;
+      border-radius: 15px;
+      background-color: blanchedalmond;
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    .navigation a {
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #004080;
+      border-radius: 5px;
+    }
+
+    .navigation a:hover {
+      background-color: #0066cc;
+    }
+
+    #time {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: white;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: bisque;">Welcome Crammer!</h1>
+
+  <div class="paragraph">
+    <p><strong>Login or create an account</strong></p>
+    <label>Email or Phone:</label><br>
+    <input type="text" placeholder="Enter username"><br><br>
+    <label>Password:</label><br>
+    <input type="password" placeholder="Enter password">
+  </div>
+
+  <div class="navigation">
+    <a href="new.html">Next</a>
+  </div>
+
+  <div id="time"></div>
+
+  <footer>
+    © 2025 STEM '25. All rights reserved.
+  </footer>
+
+  <script>
+    // Show live time
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      document.getElementById("time").textContent = `Current Time: ${timeString}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime(); // Call once immediately
+  </script>
+</body>
+</html>
