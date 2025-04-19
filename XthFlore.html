@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Cris</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Spectral+SC&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0d0d0d;
+      font-family: 'Spectral SC', serif;
+      color: #e0dede;
+      min-height: 100vh;
+    }
+
+    section {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      padding: 12px 35px;
+      margin: 15px 10px;
+      background-color: transparent;
+      border: 2px solid #b8a07e;
+      color: #b8a07e;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    label:hover {
+      background-color: #b8a07e;
+      color: black;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px black;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.7;
+    }
+
+    /* Display rules for each page */
+    #page1:checked ~ .question,
+    #yes:checked ~ .knock2,
+    #no:checked ~ .noPage,
+    #page4:checked ~ .finalStep,
+    #page3:checked ~ .confession {
+      display: block;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden Radio Buttons -->
+  <input type="radio" name="page" id="page1" checked>
+  <input type="radio" name="page" id="yes">
+  <input type="radio" name="page" id="no">
+  <input type="radio" name="page" id="page4">
+  <input type="radio" name="page" id="page3">
+
+  <!-- Page 1: Yes/No -->
+  <section class="question">
+    <h1>Hi!</h1>
+    <p>Do you want to continue?</p>
+    <label for="yes">Yes</label>
+    <label for="no">No</label>
+  </section>
+
+  <!-- Page 2: No Selected -->
+  <section class="noPage">
+    <h1>Maybe another time...</h1>
+    <p>Some things are meant to stay quiet — at least for now.</p>
+    <label for="page1">Go Back</label>
+  </section>
+
+  <!-- Page 3: Are you sure? -->
+  <section class="knock2">
+    <h1>Are you sure?</h1>
+    <p>Even if the truth will shock you?</p>
+    <label for="page4">Yes</label>
+  </section>
+
+  <!-- Page 4: Final Warning -->
+  <section class="finalStep">
+    <h1>Then read carefully...</h1>
+    <p>This is not just a message. It’s a piece of someone’s heart. Once you continue, you’ll know a truth that can’t be unheard.</p>
+    <label for="page3">I understand</label>
+  </section>
+
+  <!-- Final Confession Page -->
+  <section class="confession">
+    <h1>To Cris</h1>
+    <p>
+      I don’t even know if you’ll ever read this. But these words have been trapped in my chest for too long, and I need to let them go.<br><br>
+      Every time I see you smile, it makes the world feel a little softer. I’ve kept quiet, because I didn’t want to ruin anything. But if this page finds you someday, maybe you’ll understand — you’ve meant more to me than you’ll ever know.<br><br>
+      This is my truth. Hidden in plain sight.<br><br>
+      – Someone who cares about you more than they can say out loud.
+    </p>
+    <footer>© 2025 | A secret you may never find</footer>
+  </section>
+
+</body>
+</html>
